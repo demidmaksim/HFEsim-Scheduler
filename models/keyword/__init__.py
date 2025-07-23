@@ -1,3 +1,5 @@
+from well import WELDRAW, WELDRAWSheet
+
 from .arbitrary_word import ArbitraryWord, ArbitraryWordSheet
 from .arithmetic import ARITHMETIC, ARITHMETICSheet
 from .comment import Comment, CommentSheet
@@ -18,10 +20,10 @@ from .well import (
     FRACTURE_SPECS,
     FRACTURE_STAGE,
     WCONHIST,
-    WCONINJE,
     WCONINJH,
     WCONPROD,
     WECON,
+    WECONINJ,
     WEFAC,
     WELLTRACK,
     WELOPEN,
@@ -31,9 +33,10 @@ from .well import (
     FRACTURE_SPECSSheet,
     FRACTURE_STAGESheet,
     WCONHISTSheet,
-    WCONINJESheet,
     WCONINJHSheet,
     WCONPRODSheet,
+    WECONINJSheet,
+    WECONSheet,
     WEFACSheet,
     WELLTRACKSheet,
     WELOPENSheet,

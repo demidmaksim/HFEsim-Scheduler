@@ -5,7 +5,7 @@ from pydantic import Field
 from models.keyword._abstract import Keyword, KeywordsSheet
 
 
-class WCONINJE(Keyword):
+class WECONINJ(Keyword):
     WellName: str = Field(
         title="Имя скважины",
     )
@@ -47,5 +47,5 @@ class WCONINJE(Keyword):
     )
 
 
-class WCONINJESheet(KeywordsSheet):
-    keyword = WCONINJE
+class WECONINJSheet(KeywordsSheet):
+    keyword = WECONINJ
