@@ -12,4 +12,4 @@ class Comment(Keyword):
 
 
 class CommentSheet(KeywordsSheet):
-    pass
+    keyword = Comment

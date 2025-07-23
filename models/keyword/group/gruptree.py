@@ -18,4 +18,4 @@ class GRUPTREE(Keyword):
 
 
 class GRUPTREESheet(KeywordsSheet):
-    pass
+    keyword = GRUPTREE

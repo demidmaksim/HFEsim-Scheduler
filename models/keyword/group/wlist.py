@@ -18,4 +18,4 @@ class WLIST(Keyword):
 
 
 class WLISTSheet(KeywordsSheet):
-    pass
+    keyword = WLIST

@@ -39,4 +39,4 @@ class WSEGVALV(Keyword):
 
 
 class WSEGVALVheet(KeywordsSheet):
-    pass
+    keyword = WSEGVALV

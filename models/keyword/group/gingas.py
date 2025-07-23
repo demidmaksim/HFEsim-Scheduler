@@ -24,4 +24,4 @@ class GINJGAS(Keyword):
 
 
 class GINJGASSheet(KeywordsSheet):
-    pass
+    keyword = GINJGAS

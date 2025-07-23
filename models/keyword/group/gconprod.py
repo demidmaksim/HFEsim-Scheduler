@@ -66,4 +66,4 @@ class GCONPROD(Keyword):
 
 
 class GCONPRODSheet(KeywordsSheet):
-    pass
+    keyword = GCONPROD

@@ -45,4 +45,4 @@ class GCONINJE(Keyword):
 
 
 class GCONINJESheet(KeywordsSheet):
-    pass
+    keyword = GCONINJE

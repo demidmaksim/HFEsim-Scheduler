@@ -45,4 +45,4 @@ class WCONINJH(Keyword):
 
 
 class WCONINJHSheet(KeywordsSheet):
-    pass
+    keyword = WCONINJH

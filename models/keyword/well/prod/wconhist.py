@@ -45,4 +45,4 @@ class WCONHIST(Keyword):
 
 
 class WCONHISTSheet(KeywordsSheet):
-    pass
+    keyword = WCONHIST

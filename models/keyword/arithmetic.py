@@ -18,4 +18,4 @@ class ARITHMETIC(Keyword):
 
 
 class ARITHMETICSheet(KeywordsSheet):
-    pass
+    keyword = ARITHMETIC

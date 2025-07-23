@@ -51,4 +51,4 @@ class WECON(Keyword):
 
 
 class WECONSheet(KeywordsSheet):
-    pass
+    keyword = WECON

@@ -69,4 +69,4 @@ class WCONPROD(Keyword):
 
 
 class WCONPRODSheet(KeywordsSheet):
-    pass
+    keyword = WCONPROD

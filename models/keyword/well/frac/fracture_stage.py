@@ -21,4 +21,4 @@ class FRACTURE_STAGE(Keyword):
 
 
 class FRACTURE_STAGESheet(KeywordsSheet):
-    pass
+    keyword = FRACTURE_STAGE

@@ -78,4 +78,4 @@ class FRACTURE_SPECS(Keyword):
 
 
 class FRACTURE_SPECSSheet(KeywordsSheet):
-    pass
+    keyword = FRACTURE_SPECS

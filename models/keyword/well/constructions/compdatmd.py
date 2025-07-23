@@ -54,4 +54,4 @@ class COMPDATMD(Keyword):
 
 
 class COMPDATMDSheet(KeywordsSheet):
-    pass
+    keyword = COMPDATMD

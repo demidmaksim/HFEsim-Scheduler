@@ -18,4 +18,4 @@ class WELOPEN(Keyword):
 
 
 class WELOPENSheet(KeywordsSheet):
-    pass
+    keyword = WELOPEN

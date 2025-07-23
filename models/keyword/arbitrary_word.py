@@ -15,4 +15,4 @@ class ArbitraryWord(Keyword):
 
 
 class ArbitraryWordSheet(KeywordsSheet):
-    pass
+    keyword = ArbitraryWord

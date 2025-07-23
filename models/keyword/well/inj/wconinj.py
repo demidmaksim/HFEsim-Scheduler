@@ -48,4 +48,4 @@ class WCONINJE(Keyword):
 
 
 class WCONINJESheet(KeywordsSheet):
-    pass
+    keyword = WCONINJE

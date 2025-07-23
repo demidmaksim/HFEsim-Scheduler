@@ -18,4 +18,4 @@ class WEFAC(Keyword):
 
 
 class WEFACSheet(KeywordsSheet):
-    pass
+    keyword = WEFAC

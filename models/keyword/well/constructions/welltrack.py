@@ -27,4 +27,4 @@ class WELLTRACK(Keyword):
 
 
 class WELLTRACKSheet(KeywordsSheet):
-    pass
+    keyword = WELLTRACK

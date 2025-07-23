@@ -48,4 +48,4 @@ class WELSPECS(Keyword):
 
 
 class WELSPECSSheet(KeywordsSheet):
-    pass
+    keyword = WELSPECS
