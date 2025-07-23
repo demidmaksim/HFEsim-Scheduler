@@ -1,0 +1,24 @@
+[project]
+name = "hfesim-scheduler"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Демид Максим Сергеевич",email = "demid.maksim@gmai.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic >2.11.0, <3.0.0",
+    "pandas >2.0.0, <3.0.0",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">4.0.0, <5.0.0"
+pytest = "^8.0.0"
+mypy = "^1.10.0"
+ruff = "^0.4.0"
