@@ -1,2 +1,2 @@
-from .keyword import Keyword, KeywordsSheet
-from .schedule import Schedule
+from models.scheduler.events import Events
+from models.scheduler.keyword import Keyword, KeywordsSheet
