@@ -1,5 +1,3 @@
-from welldraw import WELDRAW, WELDRAWSheet
-
 from .constructions import (
     COMPDATMD,
     WELLTRACK,
@@ -13,5 +11,6 @@ from .inj import WCONINJH, WECONINJ, WCONINJHSheet, WECONINJSheet
 from .prod import WCONHIST, WCONPROD, WCONHISTSheet, WCONPRODSheet
 from .wecon import WECON, WECONSheet
 from .wefac import WEFAC, WEFACSheet
+from .welldraw import WELDRAW, WELDRAWSheet
 from .welopen import WELOPEN, WELOPENSheet
 from .welspecs import WELSPECS, WELSPECSSheet

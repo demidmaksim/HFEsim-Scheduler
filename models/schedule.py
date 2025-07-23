@@ -1,3 +1,5 @@
+from typing import List, Type
+
 from pydantic import BaseModel, ConfigDict, Field
 
 from models import keyword
@@ -100,3 +102,13 @@ class Schedule(BaseModel):
         title="Arbitrary Word Sheet",
         default_factory=keyword.ArbitraryWordSheet,
     )
+
+    @classmethod
+    def sheet_names(cls) -> List[str]:
+        results = [k for k in cls.model_fields.keys()]
+        return results
+
+    @classmethod
+    def get_sheet_type(cls, name: str) -> Type[keyword.KeywordsSheet]:
+        results = cls.model_fields[name].annotation
+        return results
