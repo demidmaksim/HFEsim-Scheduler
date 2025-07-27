@@ -5,7 +5,7 @@ from service import deserializer, serializer
 
 t = time.time()
 sch = Schedule(
-    event=serializer.read_exel("GAL_NORD_4var_ok1.xlsx"),
+    events=serializer.read_exel("GAL_NORD_4var_ok3.xlsx"),
 )
 deserializer.to_eclipse_ascii(sch)
 

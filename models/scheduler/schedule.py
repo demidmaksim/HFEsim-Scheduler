@@ -10,7 +10,7 @@ from models.scheduler.time_step import TimeSteps
 
 class Schedule(BaseModel):
 
-    event: Events = Field(
+    events: Events = Field(
         title="",
         default_factory=Events,
     )
@@ -22,7 +22,7 @@ class Schedule(BaseModel):
     def iter_timestamps(
         self,
     ) -> Iterable[Tuple[datetime.datetime, Optional[keyword.KeywordsSheet]]]:
-        event_steps = self.event.get_timestamps()
+        event_steps = self.events.get_timestamps()
         time_steps = self.time.get_timestamps()
         time_steps.extend(event_steps.keys())
         time_steps.sort()

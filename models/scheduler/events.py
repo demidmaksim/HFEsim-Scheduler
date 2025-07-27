@@ -1,6 +1,6 @@
 import datetime
 from collections import defaultdict
-from typing import Dict, List, Type
+from typing import Dict, List, Type, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -123,3 +123,12 @@ class Events(BaseModel):
                 results[t].append(v.__class__)
 
         return dict(results)
+
+    def get_sheet(self, sheet: Union[str, type[keyword.KeywordsSheet]]) -> keyword.KeywordsSheet:
+        if isinstance(sheet, str):
+            name = sheet
+        else:
+            name = sheet.keyword.__name__
+
+        results = getattr(self, name)
+        return results
