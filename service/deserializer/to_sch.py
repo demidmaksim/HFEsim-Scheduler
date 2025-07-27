@@ -1,7 +1,7 @@
-from models import Events
+from models.scheduler import Schedule
 
 
-def to_schedule(schedule: Events) -> None:
+def to_eclipse_ascii(schedule: Schedule) -> None:
 
-    for timestamp, events in schedule.time_step:
+    for timestamp, events in schedule.iter_timestamps():
         pass

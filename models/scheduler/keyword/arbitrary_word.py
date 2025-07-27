@@ -7,10 +7,10 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class ArbitraryWord(Keyword):
     KeyWordName: Optional[str] = Field(
-        title="Ключевое слово",
+        alias="Ключевое слово",
     )
     KeyWordValue: Optional[str] = Field(
-        title="Строка с управляющим словами",
+        alias="Строка с управляющим словами",
     )
 
 

@@ -7,43 +7,43 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WECONINJ(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     FluidType: str = Field(
-        title="Тип закачиваемого флюида",
+        alias="Тип закачиваемого флюида",
     )
     OperatingModes: str = Field(
-        title="Режим работы скважины",
+        alias="Режим работы скважины",
     )
     WellControl: str = Field(
-        title="Управление скважиной",
+        alias="Управление скважиной",
     )
     VolumeInPlace: Optional[float] = Field(
-        title="Объем закачки в поверхностных условиях",
+        alias="Объем закачки в поверхностных условиях",
     )
     VolumeInReservoir: Optional[float] = Field(
-        title="Объем закачки в пластовых условиях",
+        alias="Объем закачки в пластовых условиях",
     )
     BHP: Optional[float] = Field(
-        title="Забойное давление",
+        alias="Забойное давление",
     )
     THP: Optional[float] = Field(
-        title="Устьевое давление",
+        alias="Устьевое давление",
     )
     VFR: Optional[int] = Field(
-        title="номер VFP",
+        alias="номер VFP",
     )
     OilInFluid: Optional[float] = Field(
-        title="Концентрация нефти в нагнетаемом флюиде",
+        alias="Концентрация нефти в нагнетаемом флюиде",
     )
     OilInRate: Optional[float] = Field(
-        title="Доля нефти в потоке нагнетания",
+        alias="Доля нефти в потоке нагнетания",
     )
     WaterInRate: Optional[float] = Field(
-        title="Доля воды в потоке нагнетания",
+        alias="Доля воды в потоке нагнетания",
     )
     GasInRate: Optional[float] = Field(
-        title="Доля газа в потоке нагнетания",
+        alias="Доля газа в потоке нагнетания",
     )
 
 

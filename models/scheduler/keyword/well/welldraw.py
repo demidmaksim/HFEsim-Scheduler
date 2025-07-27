@@ -7,19 +7,19 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WELDRAW(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     MaxDrow: float = Field(
-        title="Максимально допустимая депрессия",
+        alias="Максимально допустимая депрессия",
     )
     Phase: Optional[str] = Field(
-        title="Фаза",
+        alias="Фаза",
     )
     DrowLimit: Optional[float] = Field(
-        title="Учет ограничения депрессии при расчете потенциала добычи",
+        alias="Учет ограничения депрессии при расчете потенциала добычи",
     )
     TypeLimit: Optional[str] = Field(
-        title="Ограничивается ли взвешенное по индексу продуктивности PI",
+        alias="Ограничивается ли взвешенное по индексу продуктивности PI",
     )
 
 

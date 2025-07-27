@@ -7,73 +7,73 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class FRACTURE_SPECS(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     Bore: Optional[int] = Field(
-        title="Ствол",
+        alias="Ствол",
     )
     FracName: str = Field(
-        title="Имя трещины",
+        alias="Имя трещины",
     )
     MD: float = Field(
-        title="MD",
+        alias="MD",
     )
     Azimuth: Optional[float] = Field(
-        title="Азимутальный угол",
+        alias="Азимутальный угол",
     )
     Antiaircraft: Optional[float] = Field(
-        title="Зенитный угол",
+        alias="Зенитный угол",
     )
     LeftHalfLength: float = Field(
-        title="Левая полудлина",
+        alias="Левая полудлина",
     )
     RightHalfLength: float = Field(
-        title="Правая полудлина",
+        alias="Правая полудлина",
     )
     Height1: float = Field(
-        title="Высота трещины в первом направлении",
+        alias="Высота трещины в первом направлении",
     )
     Height2: float = Field(
-        title="Высота трещины во втором направлении",
+        alias="Высота трещины во втором направлении",
     )
     Width: float = Field(
-        title="Ширина трещины FZ",
+        alias="Ширина трещины FZ",
     )
     CrackAffectedZoneWidth: Optional[float] = Field(
-        title="Ширина зоны влияния трещины",
+        alias="Ширина зоны влияния трещины",
     )
     CrackBoundaryCurvature: Optional[float] = Field(
-        title="Кривизна границы трещины",
+        alias="Кривизна границы трещины",
     )
     ReservoirPermeabilityMultiplier: Optional[float] = Field(
-        title="Множитель проницаемости пласта",
+        alias="Множитель проницаемости пласта",
     )
     Permeability: Optional[float] = Field(
-        title="Проницаемость",
+        alias="Проницаемость",
     )
     CrackImpactPermeability: Optional[float] = Field(
-        title="Проницаемость в зоне влияния трещины (NFZ)"
+        alias="Проницаемость в зоне влияния трещины (NFZ)"
     )
     MatrixPermeability: Optional[float] = Field(
-        title="Проницаемость трещины (Матрицы)",
+        alias="Проницаемость трещины (Матрицы)",
     )
     CrackImpactPermeability2: Optional[float] = Field(
-        title="Проницаемость в зоне влияния трещины (NFZ2)"
+        alias="Проницаемость в зоне влияния трещины (NFZ2)"
     )
     FractureProductivityMultiplier: Optional[float] = Field(
-        title="Множитель продуктивности трещины"
+        alias="Множитель продуктивности трещины"
     )
     ProppantTypeName: Optional[str] = Field(
-        title="Название типа пропанта",
+        alias="Название типа пропанта",
     )
     ProppantProperties: Optional[str] = Field(
-        title="Xарактеристика падения проницаемости",
+        alias="Xарактеристика падения проницаемости",
     )
     FallPeriod: Optional[float] = Field(
-        title="Период падения проницаемости в трещине",
+        alias="Период падения проницаемости в трещине",
     )
     FlowModel: Optional[str] = Field(
-        title="Имя функции зависимости проницаемости трещины от времени"
+        alias="Имя функции зависимости проницаемости трещины от времени"
     )
 
 

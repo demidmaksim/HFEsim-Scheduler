@@ -7,43 +7,43 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WELSPECS(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     GroupName: Optional[str] = Field(
-        title="Группа скважины",
+        alias="Группа скважины",
     )
     IW: Optional[float] = Field(
-        title="IW",
+        alias="IW",
     )
     JW: Optional[int] = Field(
-        title="JW",
+        alias="JW",
     )
     ReferenceDepth: Optional[int] = Field(
-        title="Опорная глубина для забойного давления",
+        alias="Опорная глубина для забойного давления",
     )
     PreferredPhase: Optional[str] = Field(
-        title="Предпочтительная фаза",
+        alias="Предпочтительная фаза",
     )
     DrainageRadius: Optional[float] = Field(
-        title="Радиус дренирования",
+        alias="Радиус дренирования",
     )
     SpecialInflowEquation: Optional[str] = Field(
-        title="Cпециальноe уравнениe притока",
+        alias="Cпециальноe уравнениe притока",
     )
     AutomaticClosing: Optional[str] = Field(
-        title="Aвтоматическое закрытие",
+        alias="Aвтоматическое закрытие",
     )
     BilateralFlows: Optional[str] = Field(
-        title="Возможность двусторонних перетоков",
+        alias="Возможность двусторонних перетоков",
     )
     PressureTable: Optional[int] = Field(
-        title="Номер таблицы свойств в стволе скважины",
+        alias="Номер таблицы свойств в стволе скважины",
     )
     CalculatingDensity: Optional[str] = Field(
-        title="Метод вычисления гидростатического напора",
+        alias="Метод вычисления гидростатического напора",
     )
     PressureCalculationMethod: Optional[str] = Field(
-        title="Способ расчета дебита в пластовых условиях"
+        alias="Способ расчета дебита в пластовых условиях"
     )
 
 

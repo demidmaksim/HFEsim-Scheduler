@@ -7,22 +7,22 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WELLTRACK(Keyword):
     WellName: Optional[str] = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     BoreName: Optional[int] = Field(
-        title="Номер ствола",
+        alias="Номер ствола",
     )
     PointNumber: Optional[int] = Field(
-        title="Порядковый номер точки",
+        alias="Порядковый номер точки",
     )
     X: Optional[float] = Field(
-        title="X",
+        alias="X",
     )
     Y: Optional[float] = Field(
-        title="Y",
+        alias="Y",
     )
     Z: Optional[float] = Field(
-        title="Z",
+        alias="Z",
     )
 
 

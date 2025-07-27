@@ -7,13 +7,13 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WEFAC(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     ServiceFactor: float = Field(
-        title="Коэффициент эксплуатации",
+        alias="Коэффициент эксплуатации",
     )
     HZFactor: Optional[str] = Field(
-        title="Учет в расчете потоков ветвей и расширенной сети",
+        alias="Учет в расчете потоков ветвей и расширенной сети",
     )
 
 

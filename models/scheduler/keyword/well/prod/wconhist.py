@@ -7,40 +7,40 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WCONHIST(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     OperatingModes: str = Field(
-        title="Режимы работы",
+        alias="Режимы работы",
     )
     WellControl: str = Field(
-        title="Управление скважиной",
+        alias="Управление скважиной",
     )
     OilFlowRate: float = Field(
-        title="Дебит нефти",
+        alias="Дебит нефти",
     )
     WaterFlowRate: float = Field(
-        title="Дебит воды",
+        alias="Дебит воды",
     )
     GasFlowRate: float = Field(
-        title="Дебит газа",
+        alias="Дебит газа",
     )
     VFP: Optional[int] = Field(
-        title="Номер таблицы VFP",
+        alias="Номер таблицы VFP",
     )
     ALQ: Optional[float] = Field(
-        title="Величина ALQ",
+        alias="Величина ALQ",
     )
     THP: Optional[float] = Field(
-        title="Устьевое давление",
+        alias="Устьевое давление",
     )
     BHP: Optional[float] = Field(
-        title="Забойное давление",
+        alias="Забойное давление",
     )
     WetGasRate: Optional[float] = Field(
-        title="Дебит жирного газа",
+        alias="Дебит жирного газа",
     )
     NGLProduction: Optional[float] = Field(
-        title="Дебит ШФЛУ",
+        alias="Дебит ШФЛУ",
     )
 
 

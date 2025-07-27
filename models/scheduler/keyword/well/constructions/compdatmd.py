@@ -7,49 +7,49 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class COMPDATMD(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     Bore: Optional[int] = Field(
-        title="Номер ствола",
+        alias="Номер ствола",
     )
     FirstCutoff: Optional[float] = Field(
-        title="Первая отсечка перфорации",
+        alias="Первая отсечка перфорации",
     )
     UpperLimit: Optional[float] = Field(
-        title="Верхний предел перфорации",
+        alias="Верхний предел перфорации",
     )
     DepthID: Optional[str] = Field(
-        title="Идентификатор значения глубины перфорации",
+        alias="Идентификатор значения глубины перфорации",
     )
     PerforationStatus: Optional[str] = Field(
-        title="Статус перфорации",
+        alias="Статус перфорации",
     )
     SaturationTable: Optional[int] = Field(
-        title="Номер таблицы насыщенности",
+        alias="Номер таблицы насыщенности",
     )
     ConductivityCoefficient: Optional[float] = Field(
-        title="Коэффициент проводимости",
+        alias="Коэффициент проводимости",
     )
     BoreholeDiameter: Optional[float] = Field(
-        title="Диаметр скважины",
+        alias="Диаметр скважины",
     )
     KH: Optional[float] = Field(
-        title="Величина KH",
+        alias="Величина KH",
     )
     SKIN: Optional[float] = Field(
-        title="Cкин",
+        alias="Cкин",
     )
     DFactor: Optional[float] = Field(
-        title="D-фактор",
+        alias="D-фактор",
     )
     ConductivityMultiplier: Optional[float] = Field(
-        title="Множитель коэффициента проводимости",
+        alias="Множитель коэффициента проводимости",
     )
     PerforationType: Optional[str] = Field(
-        title="Тип перфорации",
+        alias="Тип перфорации",
     )
     AutopsyNumber: Optional[int] = Field(
-        title="Номер вскрытия",
+        alias="Номер вскрытия",
     )
 
 

@@ -1,12 +1,14 @@
-# import time
-#
-# import pandas as pd
-#
-# from models import Events
-# from service.serializer.from_exel.serializer import read_exel
-#
-# t = time.time()
-# df = read_exel("GAL_NORD_4var_ok1.xlsx")
-# print(time.time() - t)
-#
-# pass
+import time
+
+from models.scheduler import Schedule
+from service import deserializer, serializer
+
+t = time.time()
+sch = Schedule(
+    event=serializer.read_exel("GAL_NORD_4var_ok1.xlsx"),
+)
+deserializer.to_eclipse_ascii(sch)
+
+print(time.time() - t)
+
+pass

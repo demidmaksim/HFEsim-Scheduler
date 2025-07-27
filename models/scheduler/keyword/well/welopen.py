@@ -7,13 +7,13 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WELOPEN(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     OpenDate: Optional[str] = Field(
-        title="Дата вскрытия",
+        alias="Дата вскрытия",
     )
     OpenReason: Optional[str] = Field(
-        title="Причина вскрытия",
+        alias="Причина вскрытия",
     )
 
 

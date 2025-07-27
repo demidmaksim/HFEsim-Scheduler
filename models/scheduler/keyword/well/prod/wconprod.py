@@ -7,64 +7,64 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WCONPROD(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     OperatingModes: str = Field(
-        title="Режимы работы",
+        alias="Режимы работы",
     )
     WellControl: str = Field(
-        title="Управление скважиной",
+        alias="Управление скважиной",
     )
     OilFlowRate: Optional[float] = Field(
-        title="Дебит нефти",
+        alias="Дебит нефти",
     )
     WaterFlowRate: Optional[float] = Field(
-        title="Дебит воды",
+        alias="Дебит воды",
     )
     GasFlowRate: Optional[float] = Field(
-        title="Дебит газа",
+        alias="Дебит газа",
     )
     LiquidFlowRate: Optional[float] = Field(
-        title="Дебит жидкости",
+        alias="Дебит жидкости",
     )
     FlowInReservoir: Optional[float] = Field(
-        title="Дебит флюида в пластовых условиях",
+        alias="Дебит флюида в пластовых условиях",
     )
     BHP: Optional[float] = Field(
-        title="Забойное давление",
+        alias="Забойное давление",
     )
     THP: Optional[float] = Field(
-        title="Устьевое давление",
+        alias="Устьевое давление",
     )
     VFP: Optional[int] = Field(
-        title="Номер таблицы VFP",
+        alias="Номер таблицы VFP",
     )
     ALQ: Optional[float] = Field(
-        title="Величина ALQ",
+        alias="Величина ALQ",
     )
     WetGasRate: Optional[float] = Field(
-        title="Дебит жирного газа",
+        alias="Дебит жирного газа",
     )
     MolarFlowRate: Optional[float] = Field(
-        title="Молярный дебит",
+        alias="Молярный дебит",
     )
     SteamRate: Optional[float] = Field(
-        title="Дебит пара",
+        alias="Дебит пара",
     )
     PressureShift: Optional[float] = Field(
-        title="Сдвиг давления",
+        alias="Сдвиг давления",
     )
     TemperatureShift: Optional[float] = Field(
-        title="Сдвиг температуры",
+        alias="Сдвиг температуры",
     )
     ThermalFlowRate: Optional[float] = Field(
-        title="Тепловой дебит",
+        alias="Тепловой дебит",
     )
     LinearCombination: Optional[float] = Field(
-        title="Линейная комбинация",
+        alias="Линейная комбинация",
     )
     NGLProduction: Optional[float] = Field(
-        title="Дебит ШФЛУ",
+        alias="Дебит ШФЛУ",
     )
 
 

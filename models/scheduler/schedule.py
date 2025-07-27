@@ -1,11 +1,11 @@
 import datetime
 from typing import Iterable, Optional, Tuple
 
-from events import Events
 from pydantic import BaseModel, Field
-from time_step import TimeSteps
 
 from models.scheduler import keyword
+from models.scheduler.events import Events
+from models.scheduler.time_step import TimeSteps
 
 
 class Schedule(BaseModel):

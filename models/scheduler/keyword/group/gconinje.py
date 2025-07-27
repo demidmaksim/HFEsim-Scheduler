@@ -7,40 +7,40 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class GCONINJE(Keyword):
     GroupName: str = Field(
-        title="Имя группы",
+        alias="Имя группы",
     )
     FluidType: str = Field(
-        title="Тип закачиваемого флюида",
+        alias="Тип закачиваемого флюида",
     )
     ControlType: str = Field(
-        title="Тип контроля",
+        alias="Тип контроля",
     )
     VolumeInPlace: Optional[float] = Field(
-        title="Объем закачки в поверхностных условиях",
+        alias="Объем закачки в поверхностных условиях",
     )
     VolumeInReservoir: Optional[float] = Field(
-        title="Объем закачки в пластовых условиях",
+        alias="Объем закачки в пластовых условиях",
     )
     TargetReInjection: Optional[float] = Field(
-        title="Целевой коэффициент повторной закачки",
+        alias="Целевой коэффициент повторной закачки",
     )
     TargetCompensationFactor: Optional[float] = Field(
-        title="Целевой коэффициент компенсации",
+        alias="Целевой коэффициент компенсации",
     )
     GroupToGroup: Optional[str] = Field(
-        title="Может ли дебит группы контролироваться группой",
+        alias="Может ли дебит группы контролироваться группой",
     )
     DirectionalRate: Optional[float] = Field(
-        title="Направляющий дебит группы",
+        alias="Направляющий дебит группы",
     )
     DirectionalRateType: Optional[str] = Field(
-        title="Тип направляющего дебита для предыдущего параметра"
+        alias="Тип направляющего дебита для предыдущего параметра"
     )
     GroupNameForBack: Optional[str] = Field(
-        title="Имя группы для контроля доли дебита для ре-закачки"
+        alias="Имя группы для контроля доли дебита для ре-закачки"
     )
     GroupNameForReplac: Optional[str] = Field(
-        title="Имя группы для контроля доли отбора для ре-закачки"
+        alias="Имя группы для контроля доли отбора для ре-закачки"
     )
 
 

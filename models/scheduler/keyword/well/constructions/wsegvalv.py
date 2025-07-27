@@ -7,34 +7,34 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class WSEGVALV(Keyword):
     WellName: str = Field(
-        title="Имя скважины",
+        alias="Имя скважины",
     )
     Segment: int = Field(
-        title="Номер сегмента",
+        alias="Номер сегмента",
     )
     FlowRateCoef: float = Field(
-        title="Коэффициент расхода для клапана",
+        alias="Коэффициент расхода для клапана",
     )
     CrossSectionalAreaFlow: float = Field(
-        title="Площадь поперечного сечения для потока",
+        alias="Площадь поперечного сечения для потока",
     )
     AdditionalPipeLength: Optional[float] = Field(
-        title="Дополнительная длина трубы",
+        alias="Дополнительная длина трубы",
     )
     PipeDiameter: Optional[float] = Field(
-        title="Диаметр трубы",
+        alias="Диаметр трубы",
     )
     AbsoluteRoughness: Optional[float] = Field(
-        title="Абсолютная шероховатость",
+        alias="Абсолютная шероховатость",
     )
     CrossSectionalAreaPipe: Optional[float] = Field(
-        title="Площадь поперечного сечения трубы",
+        alias="Площадь поперечного сечения трубы",
     )
     Mode: Optional[str] = Field(
-        title="Статус",
+        alias="Статус",
     )
     MaxCrossSectionalArea: Optional[float] = Field(
-        title="Максимальная площадь поперечного сечения",
+        alias="Максимальная площадь поперечного сечения",
     )
 
 

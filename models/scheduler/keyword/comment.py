@@ -7,7 +7,7 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class Comment(Keyword):
     Comment: Optional[str] = Field(
-        title="Комминтарий",
+        alias="Комминтарий",
     )
 
 

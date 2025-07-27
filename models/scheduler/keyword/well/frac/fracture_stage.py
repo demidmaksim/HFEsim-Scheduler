@@ -7,16 +7,16 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class FRACTURE_STAGE(Keyword):
     FracName: Optional[str] = Field(
-        title="Имя трещины",
+        alias="Имя трещины",
     )
     FrackState: str = Field(
-        title="Состояние",
+        alias="Состояние",
     )
     ArithmeticName: Optional[str] = Field(
-        title="Имя арифметики",
+        alias="Имя арифметики",
     )
     ProppantVolume: Optional[float] = Field(
-        title="Объем пропанта",
+        alias="Объем пропанта",
     )
 
 

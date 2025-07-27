@@ -7,61 +7,61 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class GCONPROD(Keyword):
     GroupName: str = Field(
-        title="Имя группы",
+        alias="Имя группы",
     )
     ControlType: str = Field(
-        title="Тип контроля",
+        alias="Тип контроля",
     )
     OilRate: Optional[float] = Field(
-        title="Дебит нефти",
+        alias="Дебит нефти",
     )
     WaterRate: Optional[float] = Field(
-        title="Дебит воды",
+        alias="Дебит воды",
     )
     GasRate: Optional[float] = Field(
-        title="Дебит газа",
+        alias="Дебит газа",
     )
     LiquidRate: Optional[float] = Field(
-        title="Дебит жидкости",
+        alias="Дебит жидкости",
     )
     LimitOpertion: Optional[str] = Field(
-        title="Выполняемая операция при превышении",
+        alias="Выполняемая операция при превышении",
     )
     GroupToGroup: Optional[str] = Field(
-        title="Может ли дебит группы контролироваться группой",
+        alias="Может ли дебит группы контролироваться группой",
     )
     DirectionalRate: Optional[float] = Field(
-        title="Направляющий дебит группы",
+        alias="Направляющий дебит группы",
     )
     Phase: Optional[str] = Field(
-        title="Фаза, для которой применяется предыдущий параметр",
+        alias="Фаза, для которой применяется предыдущий параметр",
     )
     WatLimitOperation: Optional[str] = Field(
-        title="Операция при превышении ограничения на дебит воды"
+        alias="Операция при превышении ограничения на дебит воды"
     )
     GasLimitOperation: Optional[str] = Field(
-        title="Операция при превышении ограничения на дебит газа"
+        alias="Операция при превышении ограничения на дебит газа"
     )
     LiqLimitOperation: Optional[str] = Field(
-        title="Операция при превышении ограничения на дебит жидкости"
+        alias="Операция при превышении ограничения на дебит жидкости"
     )
     FluidInReservoir: Optional[float] = Field(
-        title="Дебит флюида в пластовых условиях",
+        alias="Дебит флюида в пластовых условиях",
     )
     BalancingProportion: Optional[float] = Field(
-        title="Значение уравновешивающей доли отбора.",
+        alias="Значение уравновешивающей доли отбора.",
     )
     WetGasRate: Optional[float] = Field(
-        title="Дебит жирного газа",
+        alias="Дебит жирного газа",
     )
     HeatFlow: Optional[float] = Field(
-        title="Заданный дебит теплоты",
+        alias="Заданный дебит теплоты",
     )
     GasInPlace: Optional[float] = Field(
-        title="Доля дебита газа в поверхностных условиях",
+        alias="Доля дебита газа в поверхностных условиях",
     )
     WaterInPlace: Optional[float] = Field(
-        title="Доля дебита воды в поверхностных условиях",
+        alias="Доля дебита воды в поверхностных условиях",
     )
 
 

@@ -7,13 +7,13 @@ from models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 class GRUPTREE(Keyword):
     GroupName: str = Field(
-        title="Имя группы",
+        alias="Имя группы",
     )  # обязательное поле
     ParentGroup: Optional[str] = Field(
-        title="Родительская группа",
+        alias="Родительская группа",
     )
     Description: Optional[str] = Field(
-        title="Описание",
+        alias="Описание",
     )
 
 
