@@ -1,11 +1,11 @@
 from datetime import datetime
-from typing import Dict, List, Optional, Type, Union
+from typing import Any, Dict, List, Optional, Type, Union
 
 import pandas as pd
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 from tabulate import tabulate
 
-from models.scheduler.exceptions.sheet import SheetValueError
+from models.scheduler.exceptions.sheet import SheetTimeValueError, SheetValidateError
 from service import time_worker as tw
 
 
@@ -18,6 +18,19 @@ class Keyword(BaseModel):
     model_config = ConfigDict(
         extra="ignore",
     )
+
+    def __init__(self, **data: Any) -> None:
+        try:
+            super().__init__(**data)
+        except ValidationError as e:
+            error_data = [error for error in e.errors()]
+            error = SheetValidateError(
+                sheet_name=self.__class__.__name__,
+                time=data.get("Time", None),
+                column=error_data[0].get("loc", None),
+                value=error_data[0].get("input", None),
+            )
+            raise error
 
     @model_validator(mode="before")
     def force_str(cls, values, *args, **kwargs):
@@ -75,11 +88,9 @@ class KeywordsSheet:
             try:
                 date = tw.convert_to_timestemp(row.loc[self.keyword.time_name()])
             except tw.TimeValueError as e:
-                raise SheetValueError(self.keyword.__name__, i, e)
+                raise SheetTimeValueError(self.keyword.__name__, i, e)
 
             self._sheet.loc[i, self.keyword.time_name()] = date
-
-        pass
 
     def __repr__(self) -> str:
         results = f"{self.__class__.__name__}({self._sheet.index.shape[0]})"

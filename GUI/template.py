@@ -10,7 +10,7 @@ from pathlib import Path
 
 from PySide6 import QtCore, QtWidgets
 
-from models.scheduler import Schedule, TimeSteps
+from models.scheduler import Schedule, SheetTimeValueError, SheetValidateError, TimeSteps
 from service import deserializer, serializer
 
 
@@ -286,6 +286,12 @@ class HistoryChoiceWidget(QtWidgets.QWidget):
             events = serializer.read_exel(path_list[0])
             schedule = Schedule(events=events, time=time_vector)
             deserializer.to_eclipse_ascii(schedule, target_dir / file)
+
+        except SheetTimeValueError as e:
+            self.textBrowser.append(str(e))
+
+        except SheetValidateError as e:
+            self.textBrowser.append(str(e))
 
         except BaseException:
             text = "Error! Не предвиденная ошибка"

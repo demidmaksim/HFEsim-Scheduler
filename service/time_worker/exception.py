@@ -8,6 +8,8 @@ def bug_catcher(func):
     def wrapper(*args, **kwargs):
         try:
             result = func(*args, **kwargs)
+        except TimeValueError as e:
+            raise e
         except Exception as e:
             raise TimeValueError(args, e)
 
