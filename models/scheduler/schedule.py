@@ -25,6 +25,7 @@ class Schedule(BaseModel):
         event_steps = self.events.get_timestamps()
         time_steps = self.time.get_timestamps()
         time_steps.extend(event_steps.keys())
+        time_steps = list(set(time_steps))
         time_steps.sort()
 
         for ts in time_steps:
