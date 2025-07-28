@@ -56,6 +56,7 @@ class Keyword(BaseModel):
 
     def get_eclipse_string(self) -> List[Union[str, int]]:
         results = [(v if v is not None else "1*") for k, v in self if k != "time"]
+        results.append("/")
         return results
 
 

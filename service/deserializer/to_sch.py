@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Union
 
-from models.scheduler import Schedule, keyword
+from models.scheduler import Schedule
 from service import time_worker as tw
 
 __GENERATED_BY = "-- Generated : ScheduleCreator"
@@ -26,7 +26,7 @@ def __add_title(file: io.StringIO) -> io.StringIO:
 def __get_dates_keyword(time: tw.supported_time_types, file: io.StringIO) -> io.StringIO:
     time = tw.convert_to_datetime(time)
     str_time = time.strftime("%d %b %Y %H:%M:%S")
-    results = f"DATES\t\t\t\t\t\t\t\t__GENERATED_BY \n  {str_time}\t/\n/\n\n"
+    results = f"DATES\t\t\t\t\t\t\t\t{__GENERATED_BY} \n  {str_time}\t/\n/\n\n"
     file.write(results)
     return file
 
@@ -43,10 +43,6 @@ def to_eclipse_ascii(
 
         for event_type in events:
             sheet = schedule.events.get_sheet(event_type)
-
-            if isinstance(sheet, keyword.WELLTRACKSheet):
-                continue
-
             file = sheet.fill_file(file, timestamp)
 
     with open(path, "w") as file_on_drive:
