@@ -56,7 +56,12 @@ class WELLTRACKSheet(KeywordsSheet):
 
             wn = well_sheet.loc[:, key_names[0]].iloc[0]
             bn = well_sheet.loc[:, key_names[1]].iloc[0]
-            title = f"{self.keyword.__name__} '{wn}':{bn}\n"
+
+            if bn == 0:
+                title = f"{self.keyword.__name__} '{wn}'\n"
+            else:
+                title = f"{self.keyword.__name__} '{wn}':{bn}\n"
+
             file.write(title)
             string_table = tabulate(data, showindex=False, tablefmt="plain", floatfmt=".2f")
 
