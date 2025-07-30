@@ -56,9 +56,9 @@ class Events(BaseModel):
         title="WCONPROD Sheet",
         default_factory=keyword.WCONPRODSheet,
     )
-    WCONINJE: keyword.WECONINJSheet = Field(
+    WCONINJE: keyword.WCONINJESheet = Field(
         title="WECONINJ Sheet",
-        default_factory=keyword.WECONINJSheet,
+        default_factory=keyword.WCONINJESheet,
     )
     WELDRAW: keyword.WELDRAWSheet = Field(
         title="WELDRAW Sheet",
