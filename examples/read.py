@@ -1,13 +1,12 @@
 import time
 
-from models.scheduler import Schedule
-from service import deserializer, serializer
+import schedulercore
 
 t = time.time()
-sch = Schedule(
-    events=serializer.read_exel("name.xlsx"),
+sch = schedulercore.Schedule(
+    events=schedulercore.read_exel("name.xlsx"),
 )
-deserializer.to_eclipse_ascii(sch)
+schedulercore.to_eclipse_ascii(sch)
 
 print(time.time() - t)
 

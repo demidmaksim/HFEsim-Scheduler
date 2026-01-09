@@ -10,8 +10,13 @@ from pathlib import Path
 
 from PySide6 import QtCore, QtWidgets
 
-from models.scheduler import Schedule, SheetTimeValueError, SheetValidateError, TimeSteps
-from service import deserializer, serializer
+from schedulercore.models.scheduler import (
+    Schedule,
+    SheetTimeValueError,
+    SheetValidateError,
+    TimeSteps,
+)
+from schedulercore.service import deserializer, serializer
 
 
 class HistoryChoiceWidget(QtWidgets.QWidget):
