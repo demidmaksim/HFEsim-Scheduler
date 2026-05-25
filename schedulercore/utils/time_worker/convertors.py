@@ -4,8 +4,8 @@ from typing import Iterable, List, Union
 import numpy as np
 import pandas as pd
 
-from schedulercore.service.time_worker.exception import bug_catcher
-from schedulercore.service.time_worker.types import supported_time_types
+from schedulercore.utils.time_worker.exception import bug_catcher
+from schedulercore.utils.time_worker.types import supported_time_types
 
 
 def convert_from_str(value: str) -> datetime.datetime:

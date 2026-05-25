@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING, Union
 
 from dateutil.relativedelta import relativedelta
 
-from schedulercore.service.time_worker.convertors import convert_to_datetime64
+from schedulercore.utils.time_worker.convertors import convert_to_datetime64
 
 if TYPE_CHECKING:
     import numpy as np

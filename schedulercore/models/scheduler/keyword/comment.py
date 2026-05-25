@@ -2,7 +2,7 @@ from typing import Optional
 
 from pydantic import Field
 
-from schedulercore.models.scheduler import Keyword, KeywordsSheet
+from schedulercore.models.scheduler.keyword._abstract import Keyword, KeywordsSheet
 
 
 class Comment(Keyword):

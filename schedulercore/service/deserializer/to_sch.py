@@ -4,10 +4,9 @@ import io
 import shutil
 from datetime import datetime
 from pathlib import Path
-from typing import Union, TYPE_CHECKING
+from typing import TYPE_CHECKING, Union
 
-from schedulercore.service import time_worker as tw
-
+from schedulercore.utils import time_worker as tw
 
 if TYPE_CHECKING:
     from schedulercore.models.scheduler.schedule import Schedule

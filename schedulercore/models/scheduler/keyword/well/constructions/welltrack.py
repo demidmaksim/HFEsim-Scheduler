@@ -4,8 +4,8 @@ from typing import Optional, Tuple
 from pydantic import Field
 from tabulate import tabulate
 
-from schedulercore.models.scheduler import Keyword, KeywordsSheet
-from schedulercore.service import time_worker as tw
+from schedulercore.models.scheduler.keyword._abstract import Keyword, KeywordsSheet
+from schedulercore.utils import time_worker as tw
 
 
 class WELLTRACK(Keyword):

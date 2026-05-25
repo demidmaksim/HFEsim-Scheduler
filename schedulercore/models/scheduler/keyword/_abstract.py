@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_valida
 from tabulate import tabulate
 
 from schedulercore.models.scheduler.exceptions.sheet import SheetTimeValueError, SheetValidateError
-from schedulercore.service import time_worker as tw
+from schedulercore.utils import time_worker as tw
 
 
 class Keyword(BaseModel):

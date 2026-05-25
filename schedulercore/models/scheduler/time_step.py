@@ -4,7 +4,7 @@ from typing import List, Literal
 import numpy as np
 from pydantic import BaseModel, Field
 
-from schedulercore.service import time_worker as tw
+from schedulercore.utils import time_worker as tw
 
 
 class TimeSteps(BaseModel):
