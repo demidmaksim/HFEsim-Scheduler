@@ -1,6 +1,6 @@
 import datetime
 from collections import defaultdict
-from typing import Dict, List, Type, Union
+from typing import Dict, Iterable, List, Type, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -104,6 +104,11 @@ class Events(BaseModel):
         title="Arbitrary Word Sheet",
         default_factory=keyword.ArbitraryWordSheet,
     )
+
+    @classmethod
+    def annotations(cls) -> Iterable[tuple[str, Type[keyword.ArbitraryWordSheet]]]:
+        for key, sheet in cls.model_fields.items():
+            yield key, sheet.annotation
 
     @classmethod
     def sheet_names(cls) -> List[str]:

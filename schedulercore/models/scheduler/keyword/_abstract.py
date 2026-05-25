@@ -19,6 +19,11 @@ class Keyword(BaseModel):
         extra="ignore",
     )
 
+    @classmethod
+    def fields_name(cls):
+        names = tuple(v.alias for k, v in cls.model_fields.items())
+        return names
+
     def __init__(self, **data: Any) -> None:
         try:
             super().__init__(**data)
@@ -95,6 +100,13 @@ class KeywordsSheet:
     def __repr__(self) -> str:
         results = f"{self.__class__.__name__}({self._sheet.index.shape[0]})"
         return results
+
+    @classmethod
+    def fields_name(cls):
+        return cls.keyword.fields_name()
+
+    def get_df(self) -> pd.DataFrame:
+        return self._sheet
 
     def get_timestamps(self) -> List[datetime]:
         if self._sheet.empty:

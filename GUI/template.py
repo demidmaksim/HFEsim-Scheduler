@@ -209,7 +209,7 @@ class HistoryChoiceWidget(QtWidgets.QWidget):
             win = QtWidgets.QFileDialog()
             results = win.getSaveFileName(filter="*.xlsx")
             if results[0] != "":
-                pass  # get_pattern(Path(results[0]))
+                deserializer.create_pattern(Path(results[0]))
         except BaseException:
             text = "Error! Не предвиденная ошибка"
             self.textBrowser.append(text)
