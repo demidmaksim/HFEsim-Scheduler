@@ -3,7 +3,8 @@ from typing import Iterable, Optional, Tuple
 
 from pydantic import BaseModel, Field
 
-from schedulercore.models.scheduler import Events, keyword
+from schedulercore.models.scheduler.events import Events
+from schedulercore.models.scheduler import keyword
 from schedulercore.models.scheduler.time_step import TimeSteps
 
 

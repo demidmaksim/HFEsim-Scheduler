@@ -1,9 +1,14 @@
+from __future__ import annotations
+
 from pathlib import Path
-from typing import Dict, Union
+from typing import Dict, Union, TYPE_CHECKING
 
 import pandas as pd
 
-from schedulercore.models import Events, KeywordsSheet
+from schedulercore.models.scheduler.events import Events
+
+if TYPE_CHECKING:
+    from schedulercore.models import KeywordsSheet
 
 
 def read_exel(path: Union[Path, str]) -> Events:
